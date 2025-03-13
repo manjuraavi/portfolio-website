@@ -3,54 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manjusha Raavi - AI Engineer</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #333; color: white; text-align: center; padding: 20px; }
-        section { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-        h1 { color: white; }
-        h2 { color: #333; }
-        .contact a { color: #007BFF; text-decoration: none; }
-        .projects div { margin-bottom: 10px; }
-        footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 20px; }
-    </style>
+    <title>Manjusha - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Manjusha Raavi</h1>
-        <p>AI Engineer | ML Specialist | NLP Enthusiast</p>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#" class="logo">
+                    Manjusha Raavi
+                </a>
+                <ul class="nav-links">
+                    <!-- <li><a href="#home" class="active">Home</a></li> -->
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h1>Hi, I am Manjusha!</h1><br>
+                    <p>I am a passionate AI/ML Engineer who thrives on solving complex problems and bringing innovative ideas to life. With a strong analytical mindset and a curiosity-driven approach, I enjoy working in fast-paced, high-impact environments where I can contribute to meaningful projects.</p>
+                    <p>I believe in the power of AI to transform industries, and I’m always eager to learn, collaborate, and push boundaries. Whether it’s refining strategies, optimizing workflows, or exploring the latest advancements, I bring a balance of creativity, adaptability, and a results-driven mindset to everything I do.</p>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                
+                <!-- Dot before first item -->
+                <div class="timeline-dot"></div>
     
-    <section>
-        <h2>About Me</h2>
-        <p>Passionate AI/ML Engineer with expertise in LLMs, NLP, and AI model deployment. Experienced in fine-tuning transformers, developing AI-powered solutions, and operationalizing models in cloud environments.</p>
+                <div class="timeline-item">
+                    <span class="experience-date">May 2024 - Present</span>
+                    <div class="timeline-header">
+                        AI/ML Engineer
+                        <span class="header-company">Brillius Technologies Pvt Ltd</span>  
+                        <span class="header-summary">Developed AI-driven applications for business usecases.</span>
+                    </div>
+                </div>
+    
+                <!-- Dot between items -->
+                <div class="timeline-dot"></div>
+    
+                <div class="timeline-item">
+                    <span class="experience-date">Aug 2022 - Feb 2024</span>
+                    <div class="timeline-header">
+                        Production Support Analyst
+                        <span class="header-company">Tata Consultancy Services</span>  
+                        <span class="header-summary">Monitored systems, troubleshot incidents, and automated operational workflows.</span>
+                    </div>
+                </div>
+    
+                <!-- Dot between items -->
+                <div class="timeline-dot"></div>
+    
+                <div class="timeline-item">
+                    <span class="experience-date">Jan 2020 - May 2022</span>
+                    <div class="timeline-header">
+                        Student Researcher  
+                        <span class="header-company">NM EPSCoR</span>
+                        <span class="header-summary">Conducted research on cyber-security, implemented privacy-preserving techniques.</span>
+                    </div>
+                </div>
+    
+                <!-- Dot between items -->
+                <div class="timeline-dot"></div>
+    
+                <div class="timeline-item">
+                    <span class="experience-date">June 2018 - Nov 2019</span>
+                    <div class="timeline-header">
+                        Software Engineer in Test
+                        <span class="header-company">Planful Inc.</span>  
+                        <span class="header-summary">Developed automated test frameworks, optimized QA processes, and improved software reliability.</span>
+                    </div>
+                </div>
+    
+                <!-- Final Dot at the End -->
+                <div class="timeline-dot"></div>
+    
+            </div>
+        </div>
     </section>
     
-    <section class="projects">
-        <h2>Projects</h2>
-        <div>
-            <h3>Speech Processing & Speaker Diarization</h3>
-            <p>Developed a speech-to-text system using Whisper and Pyannote for speaker diarization.</p>
+    
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <i class="fas fa-brain skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Machine Learning & Deep Learning</h3>
+                        <p class="skill-description">Fine-tuning • Transformers • LLMs • AI Agents • Retrieval-Augmented Generation (RAG) • Model Optimization</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-language skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Natural Language Processing (NLP)</h3>
+                        <p class="skill-description">Prompt Engineering • LLM Evaluation Metrics (BERTScore • ROUGE • Cosine Similarity • Perplexity • F1-score)</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-robot skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Large Language Models (LLMs)</h3>
+                        <p class="skill-description">Mistral • LLaMA • OpenAI GPT • Google AI Models • Claude</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-tools skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">AI Tools & Frameworks</h3>
+                        <p class="skill-description">LangChain • LlamaIndex • Hugging Face • OpenAI APIs • Weights & Biases (W&B)</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-microphone skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Speech Processing</h3>
+                        <p class="skill-description">Whisper • Pyannote (Speaker Diarization) • SpeechBrain</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-server skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">MLOps & Deployment</h3>
+                        <p class="skill-description">Model Deployment • Docker • FastAPI • Flask • CI/CD for AI • Model Monitoring • AI Productization</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-code skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Programming</h3>
+                        <p class="skill-description">Python • SQL • Java • REST API Development • WebSockets • Spring Framework</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Cloud Services</h3>
+                        <p class="skill-description">AWS (S3 • Lambda • EC2) • Model Hosting • Scalable AI Deployment</p>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <i class="fas fa-database skill-icon"></i>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Databases</h3>
+                        <p class="skill-description">MySQL • MongoDB • NoSQL • Redis • Vector Databases (Qdrant • ChromaDB)</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <h3>Fine-Tuning LLMs for Healthcare</h3>
-            <p>Fine-tuned Mistral on a hospital dataset for domain-specific AI solutions.</p>
-        </div>
-        <div>
-            <h3>LLM-Based AI Solutions</h3>
-            <p>Developed AI chatbots and retrieval-augmented generation (RAG) solutions using LangChain and OpenAI APIs.</p>
+    </section>
+
+    <!-- project Section -->
+    <section id="project" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-item">
+                    <h3>AI Powered Speech Processing & Speaker Diarization</h3>
+                    <p class="project-meta">Developed using Whisper & Pyannote</p>
+                    <p>Built a speech-to-text service with speaker diarization, enhancing multi-speaker audio analysis for business applications.</p>
+                    <!-- <a href="#" class="git-hub">Git Hub <i class="fas fa-arrow-right"></i></a> -->
+                </div>
+    
+                <div class="project-item">
+                    <h3>Smart Healthcare AI Assistant</h3>
+                    <p class="project-meta">Fine-tuned Mistral for medical applications</p>
+                    <p>Created a Retrieval-Augmented Generation (RAG) system for a hospital dataset, enabling AI-driven doctor recommendations.</p>
+                    <!-- <a href="#" class="git-hub">Git Hub <i class="fas fa-arrow-right"></i></a> -->
+                </div>
+    
+                <div class="project-item">
+                    <h3>AI-driven Job-Candidate Matching System</h3>
+                    <p class="project-meta">Built a recruitment assistant using Llama 3.2</p>
+                    <p>Developing an AI tool using Python, FastAPI, and LangChain to analyze resumes and match candidates with relevant job roles.</p>
+                    <!-- <a href="#" class="git-hub">Git Hub <i class="fas fa-arrow-right"></i></a> -->
+                </div>
+    
+            </div>
         </div>
     </section>
     
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:manjushaa.raavi@gmail.com">manjushaa.raavi@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/manjusha-raavi-0b082015a/">My LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/manjuraavi" target="_blank">GitHub Profile</a></p>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:manjushaa.raavi@gmail.com">manjushaa.raavi@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Hyderabad, India</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="www.linkedin.com/in/manjusha-raavi-0b082015a" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/manjuraavi" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
+    
+
     <footer>
-        <p>&copy; 2025 Manjusha Raavi. All rights reserved.</p>
+        <div class="footer">
+            <!-- <div class="footer-links">
+                <p><a href="mailto:manjushaa.raavi@gmail.com">Gmail</a></p>
+                <p><a href="https://www.linkedin.com/in/manjusha-raavi-0b082015a">LinkedIn</a></p>
+                <p><a href="https://github.com/manjuraavi">Github</a></p>
+            </div>
+            <br> -->
+            <p class="footer-text">© Manjusha 2025</p>
+        </div>
     </footer>
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
