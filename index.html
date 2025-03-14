@@ -16,16 +16,37 @@
                 </a>
                 <ul class="nav-links">
                     <!-- <li><a href="#home" class="active">Home</a></li> -->
-                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#main"></a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <button class="mobile-menu-btn">☰</button>
             </nav>
         </header>
 
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <button class="close-menu">x</button>
+            <ul class="mobile-nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Projects</a></li>
+            </ul>
+        </div>
+
     </div>
+
+    <!-- Main Section -->
+    <section id="main" class="main-section">
+        <div class="container">
+            <h1 class="main-title">Manjusha Raavi</h1>
+            <p class="main-subtitle">AI Developer | Building Intelligent Solutions for the Future</p>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -50,8 +71,6 @@
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
                 
-                <!-- Dot before first item -->
-                <div class="timeline-dot"></div>
     
                 <div class="timeline-item">
                     <span class="experience-date">May 2024 - Present</span>
@@ -61,9 +80,7 @@
                         <span class="header-summary">Developed AI-driven applications for business usecases.</span>
                     </div>
                 </div>
-    
-                <!-- Dot between items -->
-                <div class="timeline-dot"></div>
+
     
                 <div class="timeline-item">
                     <span class="experience-date">Aug 2022 - Feb 2024</span>
@@ -74,8 +91,6 @@
                     </div>
                 </div>
     
-                <!-- Dot between items -->
-                <div class="timeline-dot"></div>
     
                 <div class="timeline-item">
                     <span class="experience-date">Jan 2020 - May 2022</span>
@@ -86,8 +101,6 @@
                     </div>
                 </div>
     
-                <!-- Dot between items -->
-                <div class="timeline-dot"></div>
     
                 <div class="timeline-item">
                     <span class="experience-date">June 2018 - Nov 2019</span>
@@ -214,7 +227,7 @@
 
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-container">
@@ -238,18 +251,26 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     
     
 
     <footer>
         <div class="footer">
-            <!-- <div class="footer-links">
-                <p><a href="mailto:manjushaa.raavi@gmail.com">Gmail</a></p>
-                <p><a href="https://www.linkedin.com/in/manjusha-raavi-0b082015a">LinkedIn</a></p>
-                <p><a href="https://github.com/manjuraavi">Github</a></p>
+            <div class="footer-links">
+                <!-- Email Link -->
+                <a href="mailto:manjushaa.raavi@gmail.com" class="footer-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- LinkedIn Link -->
+                <a href="https://www.linkedin.com/in/manjusha-raavi-0b082015a" target="_blank" class="footer-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <!-- GitHub Link -->
+                <a href="https://github.com/manjuraavi" target="_blank" class="footer-icon">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
-            <br> -->
             <p class="footer-text">© Manjusha 2025</p>
         </div>
     </footer>

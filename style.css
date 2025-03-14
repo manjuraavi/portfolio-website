@@ -84,7 +84,8 @@ nav {
 }
 
 .nav-links a.active {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Change to your desired active color */
+    font-weight: bold; /* Optional: Make the active link bold */
 }
 
 .nav-links a:hover {
@@ -98,57 +99,51 @@ nav {
     font-size: 1.2rem;
 }
 
-/* Hero Section */
-.hero {
+/* Main Section Styles */
+.main-section {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 80px 0;
-    min-height: calc(100vh - 80px);
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: var(--section-bg); /* Use your existing section background color */
+    padding: 20px;
 }
 
-.hero-content {
-    flex: 1;
-}
-
-.hero-title {
-    font-size: 4rem;
+.main-title {
+    font-size: 3rem; /* Large font size for name */
     font-weight: 700;
+    color: var(--primary-color); /* Use your primary color */
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
-.hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #666;
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.social-icon {
+.main-subtitle {
     font-size: 1.5rem;
-    color: var(--text-color);
-    transition: color 0.3s;
-    text-decoration: none;
+    font-weight: 400;
+    color: var(--text-color); /* Use your text color */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the subtitle */
 }
 
-.social-icon:hover {
-    color: var(--primary-color);
+/* Wave Graphic */
+.wave-graphic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-.emoji-icons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
+.wave-graphic svg {
+    display: block;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
 }
 
-.emoji {
-    font-size: 1.5rem;
+#contact {
+    min-height: 100vh; /* Make the section at least the height of the viewport */
+    padding: 70px; /* Add some padding for better spacing */
 }
 
 .contact-btn {
@@ -220,7 +215,7 @@ nav {
 /* Section Styles */
 .section {
     padding: var(--section-padding);
-}
+    width: 100%; /* Ensure section takes full width */}
 
 .section:nth-child(even) {
     background-color: var(--section-bg);
@@ -287,129 +282,116 @@ nav {
 }
 
 /* Experience Section */
+/* Timeline Container */
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 50%;
-    margin: 0 auto;
+    gap: 40px;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 800px; /* Limit maximum width for better readability */
+    margin: 0 auto; /* Center the timeline */
     position: relative;
+    padding: 0 20px; /* Add padding for smaller screens */
 }
 
 /* Vertical timeline line */
 .timeline::before {
     content: "";
     position: absolute;
-    left: 50%;
-    width: 0.2rem;
-    height: calc(100% - 70px); /* Adjust to start below the first card */
-    background: #2F3C7E;
-    transform: translateX(-50%);
-    top: 100px; /* Start below the first card */
+    left: 50%; /* Center the line */
+    width: 4px; /* Thicker line for better visibility */
+    height: 100%;
+    background: var(--timeline-color);
+    transform: translateX(-50%); /* Center the line */
+    top: 0;
     z-index: 1;
 }
 
-
-/* Timeline cards */
+/* Timeline Cards */
 .timeline-item {
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    padding: 10px;
-    top: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Ensure cards take full width */
     z-index: 2; /* Ensure cards stay above the line */
-}
-
-/* Dots between timeline items */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 14px;
-    height: 14px;
-    background: #2F3C7E;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    top: -30px; /* Positions the dot above each card */
-    z-index: 3; /* Ensure dots stay above both the cards and the line */
-}
-
-/* Remove dot from the first item */
-.timeline-item:first-child::before {
-    display: none;
 }
 
 /* Final dot at the end of the timeline */
 .timeline::after {
     content: "";
     position: absolute;
-    left: 50%;
-    width: 14px;
-    height: 14px;
-    background: #2F3C7E;
+    left: 50%; /* Center the dot */
+    width: 16px; /* Slightly larger dot */
+    height: 16px;
+    background: var(--timeline-color);
     border-radius: 50%;
-    transform: translateX(-50%);
-    bottom: -30px; /* Position it slightly below the last card */
+    transform: translateX(-50%); /* Center the dot */
+    bottom: -8px; /* Position it slightly below the last card */
     z-index: 3; /* Ensure it is above everything */
 }
-
 
 /* Timeline Header Styling */
 .timeline-header {
     width: 100%;
     background: white;
     color: var(--accent-color);
-    text-align: center;
+    text-align: center; /* Align text to the left */
     font-size: 1.1rem;
     padding: 15px;
     font-weight: 750;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Align items to the left */
+    word-break: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure words wrap properly */
+    white-space: normal; /* Ensure text wraps normally */
+    display: block; /* Ensure it behaves as a block element */
 }
 
 .header-company {
-    padding-top: 0px;
+    display: block;
+    padding-top: 0;
     font-size: 1rem;
     color: var(--primary-color);
     font-weight: 500;
-    padding-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px; /* Reduce padding */
 }
 
 .header-summary {
-    padding-top: 10px;
+    padding-top: 30px;
     font-size: 1rem;
     color: var(--text-color);
     font-weight: 400;
-    padding-bottom: 20px;
+    padding-bottom: 10px; /* Reduce padding */
+    text-align: center; /* Ensure text is left-aligned */
 }
 
 .experience-date {
     font-size: 0.9rem;
     font-style: italic;
     color: #555;
-    text-align: center;
+    text-align: center; /* Align date to the left */
     display: block;
     margin-bottom: 5px;
     padding-top: 10px;
 }
 
-/* Skills Section */
 .skills-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
     background-color: var(--card-bg-color);
-    margin-left: 20%;
-    width: 100%;
-    align-items: left;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 800px; /* Limit maximum width for better readability */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for better spacing */
 }
+
 .skills-category {
     display: flex;
     align-items: center;
@@ -417,11 +399,11 @@ nav {
     background: var(--card-bg-color);
     padding: 10px;
 }
+
 .skill-icon {
     font-size: 2rem;
     color: var(--primary-color);
     flex-shrink: 0;
-    /* border: 2px solid #007bff; */
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -430,17 +412,20 @@ nav {
     width: 60px;
     height: 60px;
 }
+
 .skill-text {
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: center;
 }
+
 .skill-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
 }
+
 .skill-description {
     font-size: 1rem;
     color: #555;
@@ -659,24 +644,32 @@ nav {
 /* Footer */
 .footer {
     display: flex;
-    justify-content: space-between; /* Aligns items to left & right */
+    justify-content: center; /* Aligns items to left & right */
     align-items: center;
     padding: 30px 50px;
     background-color: var(--primary-color);
     color: white;
-    text-align: right;
+    text-align: center;
 }
-
 
 .footer-links {
     display: flex;
-    gap: 40px;
-    color: white;
-    padding-left: 30%;
+    gap: 40px; /* Space between icons */
+}
+
+.footer-icon {
+    color: white; /* Set icon color to white */
+    font-size: 1.5rem; /* Adjust icon size */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.footer-icon:hover {
+    color: #ddd; /* Lighten color on hover */
 }
 
 .footer-text {
-    padding-left: 45%;
+    padding-left: 60px;
     font-size: 1rem;
     color: white;
 }
@@ -694,67 +687,6 @@ body.dark-mode {
 
 
 /* Responsive Styles */
-@media (max-width: 991px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 60px 0;
-    }
-    
-    .hero-content, .hero-image {
-        flex: none;
-        width: 100%;
-    }
-    
-    .hero-image {
-        margin-bottom: 40px;
-    }
-    
-    .profile-image {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .social-icons, .emoji-icons {
-        justify-content: center;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-stats {
-        margin-top: 30px;
-    }
-    
-    .timeline::before {
-        left: 40px;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 0;
-    }
-    
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-    
-    .timeline-dot {
-        left: 30px;
-        right: auto;
-    }
-    
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -775,22 +707,129 @@ body.dark-mode {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    .skills-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .skills-category {
+        flex-direction: row; /* Keep icon and text in the same line */
+        align-items: center; /* Center items vertically */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .skill-icon {
+        width: 40px; /* Smaller icon for small screens */
+        height: 40px;
+        font-size: 1.2rem; /* Smaller icon size */
+    }
+
+    .skill-text {
+        text-align: left; /* Ensure text is left-aligned */
+    }
     
     .project-grid, .projects-grid {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 576px) {
-    .profile-image {
-        width: 200px;
-        height: 200px;
+    .timeline::before {
+        left: 50%; /* Keep the line centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline::after {
+        left: 50%; /* Keep the final dot centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline-item {
+        padding-left: 20px; /* Add padding to align text */
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block; /* Show the mobile menu button */
+    }
+
+    .nav-links {
+        display: none;
     }
     
-    .hero-title {
-        font-size: 2rem;
+    .mobile-menu-btn {
+        display: block;
     }
     
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .nav-links {
+        margin-right: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .about-stats {
+        margin-top: 30px;
+    }
+
+    .timeline {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .timeline::before {
+        left: 50%; /* Keep the line centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline::after {
+        left: 50%; /* Keep the final dot centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline-item {
+        padding-left: 20px; /* Add padding to align text */
+    }
+
+    .skills-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .project-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .footer-links {
+        padding-left: 0;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .footer-text {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
     .stat-item {
         min-width: 120px;
     }
@@ -800,16 +839,7 @@ body.dark-mode {
     }
 }
 
-/* Mobile Menu */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-color);
-}
-
+/* Mobile Menu Styles */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -825,6 +855,7 @@ body.dark-mode {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
+    padding-right: 20px;
 }
 
 .mobile-menu.active {
@@ -834,6 +865,8 @@ body.dark-mode {
 
 .mobile-nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .mobile-nav-links li {
@@ -924,4 +957,182 @@ body.dark-mode {
     .section {
         page-break-inside: avoid;
     }
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-right: 20px;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .nav-links {
+        margin-right: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .about-stats {
+        margin-top: 30px;
+    }
+
+    .timeline {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .timeline::before {
+        left: 50%; /* Keep the line centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline::after {
+        left: 50%; /* Keep the final dot centered */
+        transform: translateX(-50%); /* Ensure it stays centered */
+    }
+
+    .timeline-item {
+        padding-left: 20px; /* Add padding to align text */
+    }
+
+    .skills-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .project-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .footer-links {
+        padding-left: 0;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .footer-text {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .stat-item {
+        min-width: 120px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-color);
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+    
+    .mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-nav-links {
+        list-style: none;
+    }
+    
+    .mobile-nav-links li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .mobile-nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .mobile-nav-links a:hover,
+    .mobile-nav-links a.active {
+        color: var(--primary-color);
+    }
+    
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-color);
+        cursor: pointer;
+    }
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 400px) {
+    .timeline-header {
+        font-size: 0.9rem; /* Reduce font size for small screens */
+        line-height: 1.2; /* Adjust line height for better readability */
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .header-company {
+        font-size: 0.5rem; /* Reduce font size for company name */
+        padding-bottom: 5px; /* Reduce padding */
+    }
+
+    .header-summary {
+        font-size: 0.9rem; /* Reduce font size for summary */
+        padding-bottom: 5px; /* Reduce padding */
+    }
+
+    .experience-date {
+        font-size: 0.8rem; /* Reduce font size for date */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }

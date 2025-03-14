@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    function highlightNav() {
+        let currentSection = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+
+            // Check if the section is in the viewport
+            if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionBottom - 50) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        // Add the 'active' class to the corresponding navigation link
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(currentSection)) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    // Run the function on scroll and page load
+    window.addEventListener("scroll", highlightNav);
+    highlightNav(); // Call it once on page load
+
+    
+
     // Toggle theme
     const toggleThemeBtn = document.querySelector('.toggle-theme');
     const body = document.body;
@@ -27,9 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Mobile menu functionality
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const closeMenuBtn = document.querySelector('.close-menu');
+    document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+        document.querySelector('.mobile-menu').classList.add('active');
+    });
+    
+
+    document.querySelector('.close-menu').addEventListener('click', () => {
+        document.querySelector('.mobile-menu').classList.remove('active');
+    });
     
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function() {
@@ -90,33 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
     checkScroll();
     window.addEventListener('scroll', checkScroll);
     
-    // Set active nav link based on scroll position
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    function setActiveNavLink() {
-        let currentSection = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (window.scrollY >= sectionTop - 200) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', setActiveNavLink);
-    setActiveNavLink();
-
     document.querySelectorAll(".accordion").forEach(button => {
         button.addEventListener("click", () => {
             const panel = button.nextElementSibling;
