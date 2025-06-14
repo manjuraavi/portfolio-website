@@ -576,6 +576,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 20px;
+            padding-right: 80px;
             color: #e1e1e1;
         }
         
@@ -992,7 +993,7 @@
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
                 <div class="hero-subtitle">Hello, I'm</div>
                 <h1 class="hero-title">Manjusha <span>Raavi</span></h1>
-                <p class="hero-description">A passionate <span id="typed-text"></span></p>
+                <p class="hero-description">I build <span id="typed-text"></span></p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
                     <a href="#projects" class="btn btn-outline">View Projects</a>
@@ -1010,7 +1011,7 @@
                     <img src="uploads/manju.jpg" alt="Manjusha Raavi" class="about-img">
                 </div>
                 <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-                    <h3>Backend AI Developer</h3>
+                    <h3>AI Developer</h3>
                     <p>I'm an AI Engineering Specialist focused on production-ready AI systems. With expertise in fine-tuning LLMs, building RAG pipelines, and deploying cloud-native solutions, I bridge the gap between cutting-edge AI research and scalable backend applications.</p>
                     <p>My passion lies in creating intelligent systems that can understand, reason, and interact naturally. I enjoy solving complex challenges and turning the latest research into practical, deployable solutions.</p>
                     <div class="personal-info">
@@ -1027,13 +1028,19 @@
                             <span>Location:</span> Hyderabad, India
                         </div>
                         <div class="info-item">
-                            <span>Experience:</span> 5+ Years
+                            <span>Experience:</span> 3+ Years
                         </div>
                         <div class="info-item">
                             <span>Field:</span> AI Engineering & ML
                         </div>
                     </div>
                     <a href="uploads/Resume_Manjusha.pdf" class="btn btn-primary">Download Resume</a>
+                    <p style="margin-top: 20px; font-size: 1.05rem; color:#00C9A7;">
+                        <strong>Open to AI/ML Engineer Roles:</strong> </p>
+                    <p style="margin-top: 10px; font-size: 1rem; color:#e1e1e1;">
+                        I specialize in building fast, intelligent GenAI solutions that solve real business problems. Seeking opportunities in AI-first teams where real-world outcomes matter more than leetcode.
+                    </p>
+                    
                 </div>
             </div>
         </div>
@@ -1164,11 +1171,16 @@
             <div class="projects-grid">
 
                 <div class="project-card" data-category="ai" data-aos="fade-up">
-                    <!-- <img src="/api/placeholder/400/220" alt="RAG LLM Assistant" class="project-img"> -->
-                    <!-- <span class="project-tag">AI/ML</span> -->
                     <div class="project-body">
-                        <h3 class="project-title"> Document Summarizer QA Bot</h3>
-                        <p class="project-description">Built a Streamlit application that integrates LlamaIndex and ChromaDB for context-aware document question answering (QA) and summarization. This system leverages Retrieval-Augmented Generation (RAG) to enhance the accuracy and efficiency of answering queries from documents. It reduced manual document reading time by 70%, making it an efficient tool for document processing.</p>
+                        <h3 class="project-title">Document Summarizer QA Bot</h3>
+                        <p class="project-description">
+                            <ul>
+                                <li>Built a RAG-based QA system using <strong>LlamaIndex + ChromaDB</strong>.</li>
+                                <li>Reduced manual document review time by <strong>70%</strong>.</li>
+                                <li>Integrated GPT with custom prompts for high-accuracy answers from unstructured docs.</li>
+                            </ul>
+                        </p>
+                        &nbsp;
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">LlamaIndex</span>
@@ -1180,20 +1192,21 @@
                             <a href="https://github.com/manjuraavi/document-summarizer-qa-bot" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <!-- <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a> -->
                         </div>
                     </div>
                 </div>
-
                 
                 <div class="project-card" data-category="backend" data-aos="fade-up" data-aos-delay="100">
-                    <!-- <img src="/api/placeholder/400/220" alt="Secure API Gateway" class="project-img"> -->
-                    <!-- <span class="project-tag">AI/ML</span> -->
                     <div class="project-body">
                         <h3 class="project-title">PDF PII Redaction Tool</h3>
-                        <p class="project-description">Developed an AI-powered solution to automate the redaction of Personally Identifiable Information (PII) in PDFs. The tool achieved 95%+ precision, significantly reducing the need for manual review and cutting down the processing time by 50%. It enables seamless handling of sensitive data while ensuring compliance with privacy regulations.</p>
+                        <p class="project-description">
+                            <ul>
+                                <li>Automated redaction of PII from PDFs using GPT + Regex + NER.</li>
+                                <li>Achieved <strong>95%+ precision</strong>, reducing review time by <strong>50%</strong>.</li>
+                                <li>Designed for compliance use cases and sensitive document handling.</li>
+                            </ul>
+                        </p>
+                        &nbsp;
                         <div class="project-tech">
                             <span class="tech-tag">PyMuPDF</span>
                             <span class="tech-tag">Regex</span>
@@ -1205,36 +1218,62 @@
                             <a href="https://github.com/manjuraavi/pdf-pii-redaction-tool" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <!-- <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Documentation
-                            </a> -->
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-body">
+                        <h3 class="project-title">AI SaaS Auto Email Responder</h3>
+                        <p class="project-description">
+                        <ul>
+                            <li>Built a multi-agent responder to handle parsing, retrieval, and reply generation.</li>
+                            <li>Used a <strong>RAG pipeline</strong> to generate accurate, context-aware email replies from internal business data.</li>
+                            <li>Integrated with <strong>EmailJS</strong> to automate real-time responses.</li>
+                        </ul>
+                        </p>
+                        <div class="project-tech">
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">OpenAI GPT</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">EmailJS</span>
+                        </div>
+                        <div class="project-footer">
+                        <a href="https://github.com/manjuraavi/auto_responder" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+
                 
                 <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="200">
-                    <!-- <img src="/api/placeholder/400/220" alt="LLM Parameter Optimizer" class="project-img"> -->
-                    <!-- <span class="project-tag">AI/ML</span> -->
                     <div class="project-body">
                         <h3 class="project-title">AI Content Generator with Web Scraping</h3>
-                        <p class="project-description">Developed an automated content generation system that combines web scraping from Reddit and Wikipedia with GPT-4 and ModelsLab API. This system efficiently generates dynamic content and images, reducing the manual effort required by 85%. It's designed to create fast and relevant content for various applications.</p>
+                        <p class="project-description">
+                            <ul>
+                                <li>Combined Reddit/Wikipedia scraping with GPT-4 to generate contextual content.</li>
+                                <li>Reduced manual effort by <strong>85%</strong> through automated content + image generation.</li>
+                                <li>Used ModelsLab API for dynamic visuals with scraping pipelines.</li>
+                            </ul>
+                        </p>
+                        &nbsp;
                         <div class="project-tech">
-                            <span class="tech-tag">Web Scraping</span>
+                            <span class="tech-tag">BeautifulSoup</span>
                             <span class="tech-tag">OpenAI GPT</span>
                             <span class="tech-tag">ModelsLab API</span>
-                            <span class="tech-tag">Redit</span>
                             <span class="tech-tag">Streamlit</span>
                         </div>
                         <div class="project-footer">
                             <a href="https://github.com/manjuraavi/ai-content-generator" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <!-- <a href="#" class="project-link">
-                                <i class="fas fa-book"></i> Research Paper
-                            </a> -->
                         </div>
                     </div>
                 </div>
+                
                 
             </div>
         </div>
@@ -1423,7 +1462,7 @@
             
             // Initialize Typed.js
             var typed = new Typed('#typed-text', {
-                strings: ['Backend AI Developer', 'ML Engineer', 'LLM Specialist', 'Cloud Engineer'],
+                strings: ['Production Ready AI Systems', 'AI-Powered Solutions', 'Automated Workflows', 'Intelligent Systems'],
                 typeSpeed: 50,
                 backSpeed: 30,
                 backDelay: 2000,
@@ -1507,6 +1546,274 @@
                     });
                 });
             });
+            // ...existing code...
+            // --- Remove duplicate carousel code and auto-scroll, keep only one carousel logic, no auto-scroll, no double arrows ---
+
+            // Remove duplicate carousel wrappers/arrows if any
+            function cleanupDuplicateCarousels() {
+                document.querySelectorAll('.projects-carousel-wrapper').forEach((wrapper, idx) => {
+                    if (idx > 0) wrapper.remove();
+                });
+                // Remove duplicate arrows
+                document.querySelectorAll('.carousel-arrow').forEach((btn, idx, arr) => {
+                    if (btn.parentNode && arr.indexOf(btn) !== idx) btn.remove();
+                });
+            }
+            cleanupDuplicateCarousels();
+
+            // --- Single Projects Carousel Logic (no auto-scroll, no duplicate arrows) ---
+            setTimeout(function() {
+                const projectsGrid = document.querySelector('.projects-grid');
+                if (!projectsGrid) return;
+
+                // Only wrap if not already wrapped
+                let carouselWrapper = projectsGrid.parentNode;
+                if (!carouselWrapper.classList.contains('projects-carousel-wrapper')) {
+                    carouselWrapper = document.createElement('div');
+                    carouselWrapper.className = 'projects-carousel-wrapper';
+                    projectsGrid.parentNode.insertBefore(carouselWrapper, projectsGrid);
+                    carouselWrapper.appendChild(projectsGrid);
+                }
+
+                // Remove existing arrows/dots
+                carouselWrapper.querySelectorAll('.carousel-arrow, .carousel-dots').forEach(el => el.remove());
+
+                // Style grid for horizontal scroll
+                projectsGrid.style.display = 'flex';
+                projectsGrid.style.overflowX = 'auto';
+                projectsGrid.style.scrollBehavior = 'smooth';
+                projectsGrid.style.gap = '30px';
+                projectsGrid.style.padding = '10px 0';
+                projectsGrid.style.width = '100%';
+                projectsGrid.classList.add('hide-scrollbar');
+
+                // Set card min-width for N-at-a-time
+                function updateCardWidthAndDots() {
+                    const gridWidth = projectsGrid.offsetWidth;
+                    let cardsPerView = 3;
+                    if (window.innerWidth < 992) cardsPerView = 2;
+                    if (window.innerWidth < 768) cardsPerView = 1;
+                    const gap = 30 * (cardsPerView - 1);
+                    const cardWidth = Math.floor((gridWidth - gap) / cardsPerView);
+                    projectsGrid.querySelectorAll('.project-card').forEach(card => {
+                        card.style.minWidth = cardWidth + 'px';
+                        card.style.maxWidth = cardWidth + 'px';
+                        card.style.flex = '0 0 ' + cardWidth + 'px';
+                    });
+                    createCarouselDots(projectsGrid, carouselWrapper);
+                    updateActiveDot(projectsGrid, carouselWrapper);
+                }
+
+                // Create left/right arrow buttons
+                const leftBtn = document.createElement('button');
+                leftBtn.className = 'carousel-arrow carousel-arrow-left';
+                leftBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                const rightBtn = document.createElement('button');
+                rightBtn.className = 'carousel-arrow carousel-arrow-right';
+                rightBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+                carouselWrapper.insertBefore(leftBtn, projectsGrid);
+                carouselWrapper.appendChild(rightBtn);
+
+                // Arrow button styles and hide scrollbar
+                if (!document.getElementById('carousel-style')) {
+                    const style = document.createElement('style');
+                    style.id = 'carousel-style';
+                    style.innerHTML = `
+                    .projects-carousel-wrapper {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .carousel-arrow {
+                        background: var(--primary);
+                        color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        width: 45px;
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 2;
+                        opacity: 0.85;
+                        transition: background 0.2s, opacity 0.2s;
+                        box-shadow: 0 4px 15px rgba(78, 84, 200, 0.15);
+                    }
+                    .carousel-arrow:hover {
+                        background: var(--secondary);
+                        opacity: 1;
+                    }
+                    .carousel-arrow-left { left: -20px; }
+                    .carousel-arrow-right { right: -20px; }
+                    @media (max-width: 992px) {
+                        .carousel-arrow-left { left: 0; }
+                        .carousel-arrow-right { right: 0; }
+                    }
+                    @media (max-width: 768px) {
+                        .projects-grid .project-card {
+                            min-width: 90vw !important;
+                            max-width: 90vw !important;
+                            flex: 0 0 90vw !important;
+                        }
+                    }
+                    .projects-grid.hide-scrollbar {
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
+                    }
+                    .projects-grid.hide-scrollbar::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .carousel-dots {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 18px 0 0 0;
+                        width: 100%;
+                    }
+                    .carousel-dot {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: #8F94FB;
+                        opacity: 0.5;
+                        cursor: pointer;
+                        transition: background 0.2s, opacity 0.2s, transform 0.2s;
+                        display: inline-block;
+                    }
+                    .carousel-dot.active {
+                        background: var(--secondary);
+                        opacity: 1;
+                        transform: scale(1.2);
+                    }
+                    `;
+                    document.head.appendChild(style);
+                }
+
+                // Scroll logic
+                function scrollProjects(direction) {
+                    const card = projectsGrid.querySelector('.project-card');
+                    if (!card) return;
+                    let cardsPerView = 3;
+                    if (window.innerWidth < 992) cardsPerView = 2;
+                    if (window.innerWidth < 768) cardsPerView = 1;
+                    const cardWidth = card.offsetWidth + 30;
+                    projectsGrid.scrollBy({
+                        left: direction * cardWidth * cardsPerView,
+                        behavior: 'smooth'
+                    });
+                }
+                leftBtn.addEventListener('click', () => scrollProjects(-1));
+                rightBtn.addEventListener('click', () => scrollProjects(1));
+
+                // Update active dot on scroll
+                projectsGrid.addEventListener('scroll', function() {
+                    updateActiveDot(projectsGrid, carouselWrapper);
+                });
+
+                // Responsive: update card width and arrow position
+                function updateArrowPosition() {
+                    if (window.innerWidth < 1200) {
+                        leftBtn.style.left = '-20px';
+                        rightBtn.style.right = '-20px';
+                    } else {
+                        leftBtn.style.left = '-60px';
+                        rightBtn.style.right = '-60px';
+                    }
+                    if (window.innerWidth < 768) {
+                        leftBtn.style.left = '0';
+                        rightBtn.style.right = '0';
+                    }
+                }
+                updateArrowPosition();
+                window.addEventListener('resize', () => {
+                    updateCardWidthAndDots();
+                    updateArrowPosition();
+                });
+
+                updateCardWidthAndDots();
+            }, 0);
+
+            // Helper: create dots for each "page" (set of visible cards)
+            function createCarouselDots(projectsGrid, carouselWrapper) {
+                // Remove existing dots if any
+                const oldDots = carouselWrapper.querySelector('.carousel-dots');
+                if (oldDots) oldDots.remove();
+
+                const cards = projectsGrid.querySelectorAll('.project-card');
+                let cardsPerView = 3;
+                if (window.innerWidth < 992) cardsPerView = 2;
+                if (window.innerWidth < 768) cardsPerView = 1;
+                const numPages = Math.max(1, Math.ceil(cards.length / cardsPerView));
+
+                const dotsContainer = document.createElement('div');
+                dotsContainer.className = 'carousel-dots';
+                for (let i = 0; i < numPages; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'carousel-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.dataset.index = i;
+                    dotsContainer.appendChild(dot);
+                }
+                carouselWrapper.appendChild(dotsContainer);
+
+                // Dot click: scroll to page
+                dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {
+                    dot.addEventListener('click', function() {
+                        const pageIndex = parseInt(this.dataset.index, 10);
+                        const card = projectsGrid.querySelector('.project-card');
+                        if (!card) return;
+                        let cardsPerView = 3;
+                        if (window.innerWidth < 992) cardsPerView = 2;
+                        if (window.innerWidth < 768) cardsPerView = 1;
+                        const cardWidth = card.offsetWidth + 30;
+                        projectsGrid.scrollTo({
+                            left: pageIndex * cardWidth * cardsPerView,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            }
+
+            // Helper: update active dot based on scroll position
+            function updateActiveDot(projectsGrid, carouselWrapper) {
+                const dots = carouselWrapper.querySelectorAll('.carousel-dot');
+                if (!dots.length) return;
+                let cardsPerView = 3;
+                if (window.innerWidth < 992) cardsPerView = 2;
+                if (window.innerWidth < 768) cardsPerView = 1;
+                const card = projectsGrid.querySelector('.project-card');
+                if (!card) return;
+                const cardWidth = card.offsetWidth + 30;
+                // Calculate the max possible page index
+                const cards = projectsGrid.querySelectorAll('.project-card');
+                const numPages = Math.max(1, Math.ceil(cards.length / cardsPerView));
+                let pageIndex = Math.round(projectsGrid.scrollLeft / (cardWidth * cardsPerView));
+                // Clamp pageIndex to valid range
+                if (pageIndex < 0) pageIndex = 0;
+                if (pageIndex > numPages - 1) pageIndex = numPages - 1;
+                dots.forEach((dot, i) => {
+                    if (i === pageIndex) {
+                        dot.classList.add('active');
+                        dot.style.background = 'var(--secondary)';
+                        dot.style.opacity = '1';
+                        dot.style.transform = 'scale(1.2)';
+                    } else {
+                        dot.classList.remove('active');
+                        dot.style.background = '#8F94FB';
+                        dot.style.opacity = '0.5';
+                        dot.style.transform = 'scale(1)';
+                    }
+                });
+            }
                         
             // Initialize EmailJS
             (function() {
